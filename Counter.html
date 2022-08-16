@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>Counter</title>
+
+<head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: blueviolet;
+
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-bottom: 35px;
+        }
+
+        .buttons button {
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid black;
+            cursor: pointer;
+            margin-right: 15px;
+            border-radius: 12px;
+
+        }
+
+        span#num {
+
+            font-size: 75px;
+            margin-bottom: 35px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>COUNTER</h1>
+        <span id="num">0</span>
+        <div class="buttons">
+            <button onclick="passNum(1)">Increase</button>
+            <button onclick="refresh()">Reset</button>
+            <button onclick="passNum(-1)">Decrease</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    let number = document.getElementById('num');
+    let count = 0;
+    function passNum(x) {
+
+        count = count + x;
+        number.innerHTML = count;
+
+    }
+    function refresh() {
+        count = 0;
+        number.innerHTML = count;
+    }
+
+</script>
+
+</html>
